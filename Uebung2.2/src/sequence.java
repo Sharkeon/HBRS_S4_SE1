@@ -6,6 +6,10 @@ import java.util.Set;
 
 public class sequence implements sequenceIF {
 	
+	public static void main(String[] args){
+
+	}
+	
 	String[][] abhaengigkeiten;
 	
 	public sequence (String [][] abh) {
@@ -67,14 +71,6 @@ public class sequence implements sequenceIF {
 		return false;
 		
 	}
-
-
-public static void main(String[] args){
-	sequence test = new sequence(new String[][]{{ "A" , "C" }, { "C", "D" }, { "B", "C" }});
-	System.out.println(test.isWellSorted(new String[]{ "D" , "C", "B", "A" }));
-	String[] a = {};
-	System.out.print(test.isWellSorted(a));
-}
 
 }
 
