@@ -31,6 +31,7 @@ public class sequence implements sequenceIF {
 	}
 	
 	public boolean korekkteSequenz (String[] sequence) {
+		if(sequence.length == 0) {return false;}
 		Set<String> menge = new HashSet<>(Arrays.asList(sequence));
 		return menge.size() == sequence.length;
 	}
