@@ -8,7 +8,7 @@ public class sequenz {
 	
 	String[][] abhaengigkeiten;
 	
-	public Sequenz (String [][] abh) {
+	public sequenz (String [][] abh) {
 		abhaengigkeiten = abh;
 	}
 	
