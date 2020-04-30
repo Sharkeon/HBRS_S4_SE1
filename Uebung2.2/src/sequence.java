@@ -49,7 +49,7 @@ public class sequence implements sequenceIF {
 		List<String> anfang = anfangenmit();
 		List<String> gelesen = new ArrayList<String>();
 		
-		if(anfang.contains(sequence[0]) && korekkteSequenz(sequence) ) {
+		if(korekkteSequenz(sequence) && anfang.contains(sequence[0])) {
 			gelesen.add(sequence[0]);
 			for (int i = 1; i < sequence.length;i++) {
 				if(!anfang.contains(sequence[i])) {
@@ -72,6 +72,8 @@ public class sequence implements sequenceIF {
 public static void main(String[] args){
 	sequence test = new sequence(new String[][]{{ "A" , "C" }, { "C", "D" }, { "B", "C" }});
 	System.out.println(test.isWellSorted(new String[]{ "D" , "C", "B", "A" }));
+	String[] a = {};
+	System.out.print(test.isWellSorted(a));
 }
 
 }
