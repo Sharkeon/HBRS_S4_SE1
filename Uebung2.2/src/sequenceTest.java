@@ -19,12 +19,12 @@ public class sequenceTest {
     @Test
     @DisplayName("Korekkte Sequenzen werden akzeptiert")
     void korekkteSequenz_korekkteSequenz_True() {
-        assertTrue(test1.korekkteSequenz(new String[]{ "D" , "C", "B", "A" }));
+        assertTrue(test1.korrekteSequenz(new String[]{ "D" , "C", "B", "A" }));
     }
     @Test
     @DisplayName("Sequenzen mit doppeltem Inhalt werden nicht akzeptiert")
     void korekkteSequenz_doppelteSequenz_False() {
-        assertFalse(test1.korekkteSequenz(new String[]{ "D" , "D", "B", "A" }));
+        assertFalse(test1.korrekteSequenz(new String[]{ "D" , "D", "B", "A" }));
     }
     
     @Test

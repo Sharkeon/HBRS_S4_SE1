@@ -34,7 +34,7 @@ public class sequence implements sequenceIF {
 		return rg;
 	}
 	
-	public boolean korekkteSequenz (String[] sequence) {
+	public boolean korrekteSequenz (String[] sequence) {
 		if(sequence.length == 0) {return false;}
 		Set<String> menge = new HashSet<>(Arrays.asList(sequence));
 		return menge.size() == sequence.length;
@@ -53,7 +53,7 @@ public class sequence implements sequenceIF {
 		List<String> anfang = anfangenmit();
 		List<String> gelesen = new ArrayList<String>();
 		
-		if(korekkteSequenz(sequence) && anfang.contains(sequence[0])) {
+		if(korrekteSequenz(sequence) && anfang.contains(sequence[0])) {
 			gelesen.add(sequence[0]);
 			for (int i = 1; i < sequence.length;i++) {
 				if(!anfang.contains(sequence[i])) {
