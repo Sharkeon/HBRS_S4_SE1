@@ -52,7 +52,8 @@ public class sequenceTest {
     void isWellSorted_transitiveAbh_entsprechendDerAbh() {
     	assertFalse(test4.isWellSorted(new String[]{"C","A"}));
     	assertFalse(test4.isWellSorted(new String[]{"B","C"}));
-    	assertTrue(test4.isWellSorted(new String[]{"A","C"}));
+    	assertFalse(test4.isWellSorted(new String[]{"A","C"}));
+    	assertTrue(test4.isWellSorted(new String[]{"A","B","C"}));
     }
     
     
