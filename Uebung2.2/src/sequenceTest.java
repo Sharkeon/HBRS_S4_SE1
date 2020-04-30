@@ -27,6 +27,12 @@ public class sequenceTest {
         assertFalse(test1.korekkteSequenz(new String[]{ "D" , "D", "B", "A" }));
     }
     
+    @Test
+    @DisplayName("Leere Sequenzen sind nicht well Sorted")
+    void isWellSorted_leereSequenz_False() {
+    	assertFalse(test1.isWellSorted(new String[]{}));
+    }
+    
     
     @Test
     @DisplayName("Teste verschiedene Szenarien für isWellSorted()")
