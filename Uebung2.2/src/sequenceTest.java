@@ -33,6 +33,13 @@ public class sequenceTest {
     	assertFalse(test1.isWellSorted(new String[]{}));
     }
     
+    @Test
+    @DisplayName("Sequenzen mit Buchstaben, die nicht in den Abh‰ngigkeiten auftauchen, sind nicht well Sorted")
+    void isWellSorted_falscherBuchstabe_False() {
+    	assertFalse(test1.isWellSorted(new String[]{"A","G"}));
+    }
+    
+    
     
     @Test
     @DisplayName("Teste verschiedene Szenarien f√ºr isWellSorted()")
