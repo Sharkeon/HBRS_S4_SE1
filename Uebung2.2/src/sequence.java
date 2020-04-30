@@ -69,7 +69,7 @@ public class sequence {
 
 
 public static void main(String[] args){
-	Sequenz test = new Sequenz(new String[][]{{ "A" , "C" }, { "C", "D" }, { "B", "C" }});
+	sequence test = new sequence(new String[][]{{ "A" , "C" }, { "C", "D" }, { "B", "C" }});
 	System.out.println(test.isWellSorted(new String[]{ "D" , "C", "B", "A" }));
 }
 
