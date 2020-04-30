@@ -37,6 +37,7 @@ public class sequence implements sequenceIF {
 	}
 	
 	public boolean weitermit (String a, List<String> gelesen) {
+		
 		for (int i = 0; i < this.abhaengigkeiten.length;i++) {
 			if(abhaengigkeiten[i][1].equals(a)) {
 				if(!gelesen.contains(abhaengigkeiten[i][0])) {return false;}

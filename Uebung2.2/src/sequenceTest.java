@@ -34,9 +34,10 @@ public class sequenceTest {
     }
     
     @Test
-    @DisplayName("Sequenzen mit Buchstaben, die nicht in den Abhängigkeiten auftauchen, sind nicht well Sorted")
+    @DisplayName("Sequenzen mit Buchstaben, die nicht in den Abhängigkeiten auftauchen, werden korrekt behandelt")
     void isWellSorted_falscherBuchstabe_False() {
-    	assertFalse(test1.isWellSorted(new String[]{"A","G"}));
+    	assertTrue(test1.isWellSorted(new String[]{"A","G"}));
+    	assertFalse(test1.isWellSorted(new String[]{"G","C"}));
     }
     
     
