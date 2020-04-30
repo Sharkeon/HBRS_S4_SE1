@@ -4,11 +4,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class sequenz {
+public class sequence {
 	
 	String[][] abhaengigkeiten;
 	
-	public sequenz (String [][] abh) {
+	public sequence (String [][] abh) {
 		abhaengigkeiten = abh;
 	}
 	
