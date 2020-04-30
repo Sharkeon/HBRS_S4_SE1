@@ -1,5 +1,6 @@
 import jdk.jfr.Description;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,14 +15,21 @@ public class sequenceTest {
         test2 = new sequence(new String[][]{{ "A" , "B" }, { "B", "C" }, { "C", "D" }});
         test3 = new sequence(new String[][]{{ "A" , "C" }, { "C", "D" }, { "B", "C" }});
     }
-    @Description("Teste verschiedene Szenarien für korekkteSequenz()")
-    @org.junit.jupiter.api.Test
-    void korekkteSequenz() {
+    
+    @Test
+    @DisplayName("Korekkte Sequenzen werden akzeptiert")
+    void korekkteSequenz_korekkteSequenz_True() {
         assertTrue(test1.korekkteSequenz(new String[]{ "D" , "C", "B", "A" }));
+    }
+    @Test
+    @DisplayName("Sequenzen mit doppeltem Inhalt werden nicht akzeptiert")
+    void korekkteSequenz_doppelteSequenz_False() {
         assertFalse(test1.korekkteSequenz(new String[]{ "D" , "D", "B", "A" }));
     }
-    @Description("Teste verschiedene Szenarien für isWellSorted()")
-    @org.junit.jupiter.api.Test
+    
+    
+    @Test
+    @DisplayName("Teste verschiedene Szenarien für isWellSorted()")
     void isWellSorted() {
         assertTrue(test1.isWellSorted(new String[]{"A","B","C","D"}));
         assertFalse(test2.isWellSorted(new String[]{"A","C","D"}));
